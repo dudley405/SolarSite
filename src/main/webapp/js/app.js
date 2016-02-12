@@ -4,8 +4,7 @@ app.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
-        // change below template URL to servlet path (ex. /index) -- controller will return parital view
-        templateUrl: 'html/partials/_index.html',
+        templateUrl: '/tool',
         controller: 'indexController'
       }).
       otherwise({
