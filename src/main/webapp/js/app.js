@@ -1,17 +1,17 @@
-var app = angular.module('solarApp', ['ui.bootstrap', 'ngAnimate', 'ngRoute']);
+var app = angular.module('solarApp', ['ui.bootstrap', 'ngAnimate', 'ui.router']);
 
-app.config(['$routeProvider',
-  function($routeProvider) {
-    $routeProvider.
-      when('/', {
-        templateUrl: '/tool',
-        controller: 'indexController'
-      }).
-      otherwise({
-        redirectTo: '/'
-      });
-  }]);
+app.config(function($stateProvider, $urlRouterProvider) {
+
+  $urlRouterProvider.otherwise("/");
+
+  $stateProvider
+    .state('main', {
+      url: "/results",
+      templateUrl: "/tool"
+    });
+});
 
   app.controller('indexController', ['$scope', function($scope) {
-    $scope.greeting = 'Hola!';
+    $scope.radioModel = 'offGrid';
+    $scope.greeting = "HEYOOOO";
   }]);
