@@ -1,9 +1,10 @@
 <!DOCTYPE html>
 <html lang="en" ng-app="solarApp">
    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
       <!-- Includes -->
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-      <link href='https://fonts.googleapis.com/css?family=Candal' rel='stylesheet' type='text/css'>
+      <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
       <link rel="stylesheet" href="css/app.css">
       <meta charset="UTF-8">
       <title>Solar Calculator</title>
@@ -12,29 +13,29 @@
       <div class="container-fluid">
          <div class="wrapper">
             <form class="form-horizontal">
-               <h2 class="tool-logo">Solar Calculator</h2>
+               <h2 class="tool-logo row">Solar Calculator</h2>
                <div class="form-group">
-                  <label for="gridRadio" class="col-sm-7">Off Grid or Grid Tied</label>
-                  <div class="btn-group pull-right col-md-5" id="gridRadio">
-                     <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'offGrid'">Off Grid</label>
-                     <label class="btn btn-default" ng-model="radioModel" uib-btn-radio="'onGrid'">Grid Tied</label>
+                  <label for="gridRadio" class="col-sm-5 control-label">Sytem Type</label>
+                  <div class="btn-group pull-right col-sm-6" id="gridRadio">
+                     <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'offGrid'">Off Grid</label>
+                     <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'onGrid'">Grid Tied</label>
                   </div>
                </div>
-               <div class="form-group">
-                  <label for="kilowattUsage" class="col-sm-7 control-label pull-left">Kilowatts Used Monthly (from electric bill)</label>
-                  <div class="col-sm-5">
+               <div class="form-group has-feedback">
+                  <label for="kilowattUsage" class="col-sm-5 control-label pull-left">Kilowatts Used Monthly</label>
+                  <div class="col-sm-7">
                      <input type="text" class="form-control" ng-model="kilowatts" id="kilowattUsage" placeholder="Kilowatts">
                   </div>
                </div>
                <div ng-hide="radioModel == 'offGrid'" class="form-group">
-                  <label for="percentageSolar" class="col-sm-7 control-label pull-left"> Desired percentage offset from solar</label>
-                  <div class="col-sm-5">
+                  <label for="percentageSolar" class="col-sm-5 control-label pull-left"> Desired Offset Percentage</label>
+                  <div class="col-sm-7">
                      <input type="text" class="form-control" ng-model="percentage" id="percentageSolar" placeholder="%">
                   </div>
                </div>
                <div class="form-group">
-                  <label for="zipCode" class="col-sm-7 control-label pull-left">Zip Code</label>
-                  <div class="col-sm-5">
+                  <label for="zipCode" class="col-sm-5 control-label pull-left">Zip Code</label>
+                  <div class="col-sm-7">
                      <input type="text" class="form-control" ng-model="zipCode" id="zipCode" placeholder="Zip">
                   </div>
                </div>
