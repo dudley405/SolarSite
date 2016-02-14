@@ -12,11 +12,12 @@
    <body ng-controller="indexController">
       <div class="container-fluid">
          <div class="wrapper">
+         <div class="form-wrapper">
             <form class="form-horizontal">
                <h2 class="tool-logo row">Solar Calculator</h2>
                <div class="form-group">
-                  <label for="gridRadio" class="col-sm-5 control-label">Sytem Type</label>
-                  <div class="btn-group pull-right col-sm-6" id="gridRadio">
+                  <label for="gridRadio" class="col-sm-5 control-label">System Type</label>
+                  <div class="btn-group pull-right col-sm-7" id="gridRadio">
                      <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'offGrid'">Off Grid</label>
                      <label class="btn btn-primary" ng-model="radioModel" uib-btn-radio="'onGrid'">Grid Tied</label>
                   </div>
@@ -54,6 +55,7 @@
                {{lng}}
                {{zone}}
             </div>
+         </div>
          </div>
       </div>
       <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBTnFHiN73ieGxnZXO-6xn83MGvAMK8zjw&libraries=geometry"></script>
