@@ -7,12 +7,17 @@ body {
     max-width: 50%;
     margin-left: auto;
     margin-right: auto;
+    font-family: 'Candal', sans-serif;
 }
 
 .tool-logo {
   text-align: center;
   font-weight: bold;
   margin-bottom: 50px;
+}
+
+#gridRadio {
+
 }
 
 .form-horizontal .control-label{
@@ -23,10 +28,6 @@ body {
   background: #BBF0D7;
 }
 
-form {
-  font-family: 'Candal', sans-serif;
-}
-
 .form-group {
   margin-bottom: 30px;
 }
@@ -34,6 +35,21 @@ form {
 .form-control:focus {
   border-color: #637F4E;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 8px rgba(99, 127, 78, 0.6);
+}
+
+.glyphicon.spinning {
+    animation: spin 1.5s infinite linear;
+    -webkit-animation: spin2 1.5s infinite linear;
+}
+
+@keyframes spin {
+    from { transform: scale(1) rotate(0deg); }
+    to { transform: scale(1) rotate(360deg); }
+}
+
+@-webkit-keyframes spin2 {
+    from { -webkit-transform: rotate(0deg); }
+    to { -webkit-transform: rotate(360deg); }
 }
 
 
